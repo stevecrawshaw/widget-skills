@@ -1,0 +1,33 @@
+<h1><code ng:non-bindable="">uriComponentEncode</code>
+<div><span class="hint">filter in module <code ng:non-bindable="">ods-widgets</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ods-widgets-filter-page ods-widgets-filter-uricomponentencode-page"><p>This filter can be used to prepare a string to be used as a parameter when building a link.
+It&#39;s important to understand that &#39;uriComponentEncode&#39; filters the entire string, whereas &#39;uriEncode&#39; (see <a href="#/api/ods-widgets.filter:uriEncode">reference page</a>) filter ignores
+protocol prefix (&#39;http://&#39;) and domain name.
+This filter uses the &#39;encodeURIComponent&#39; JavaScript function under the hood.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage"><h3 id="usage_in-html-template-binding">In HTML Template Binding</h3>
+<div class="in-html-template-binding"><code ng:non-bindable=""><span>{{</span> uriComponentEncode_expression | uriComponentEncode <span>}}</span></code>
+</div>
+<h3 id="usage_in-javascript">In JavaScript</h3>
+<div class="in-javascript"><code ng:non-bindable="">$filter('uriComponentEncode')(A)</code>
+</div>
+<h4 id="usage_in-javascript_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>A</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ods-widgets-filter-page ods-widgets-filter-uricomponentencode-page"><p>string.</p>
+</div></td></tr></tbody></table><h4 id="usage_in-javascript_returns">Returns</h4><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ods-widgets-filter-page ods-widgets-filter-uricomponentencode-page"><p>A URL encoded value (be aware that this filter will also encode protocol prefix (&#39;http://&#39;) and domain name).</p>
+</div></td></tr></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ods-widgets-filter-page ods-widgets-filter-uricomponentencode-page"><pre class="prettyprint linenums">
+value = 'cats&dogs'
+</pre>
+<pre class="prettyprint linenums">
+value|uriComponentEncode
+</pre>
+<pre class="prettyprint linenums">
+cats%26dogs
+</pre>
+</div></div>
+</div>

@@ -1,0 +1,32 @@
+<h1><code ng:non-bindable="">uriEncode</code>
+<div><span class="hint">filter in module <code ng:non-bindable="">ods-widgets</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ods-widgets-filter-page ods-widgets-filter-uriencode-page"><p>This filter can be used to prepare a string to be used when building a link.
+It&#39;s important to understand that this filter encodes a string but ignores protocol prefix (&#39;http://&#39;) and domain name.
+This filter uses the &#39;encodeURI&#39; JavaScript function under the hood.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage"><h3 id="usage_in-html-template-binding">In HTML Template Binding</h3>
+<div class="in-html-template-binding"><code ng:non-bindable=""><span>{{</span> uriEncode_expression | uriEncode <span>}}</span></code>
+</div>
+<h3 id="usage_in-javascript">In JavaScript</h3>
+<div class="in-javascript"><code ng:non-bindable="">$filter('uriEncode')(A)</code>
+</div>
+<h4 id="usage_in-javascript_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>A</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ods-widgets-filter-page ods-widgets-filter-uriencode-page"><p>string.</p>
+</div></td></tr></tbody></table><h4 id="usage_in-javascript_returns">Returns</h4><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ods-widgets-filter-page ods-widgets-filter-uriencode-page"><p>A URL encoded value (but ignores protocol prefix (&#39;http://&#39;) and domain name).</p>
+</div></td></tr></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ods-widgets-filter-page ods-widgets-filter-uriencode-page"><pre class="prettyprint linenums">
+value = 'https://website.com?x=шеллы'
+</pre>
+<pre class="prettyprint linenums">
+value|uriEncode
+</pre>
+<pre class="prettyprint linenums">
+https://website.com?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B
+</pre>
+</div></div>
+</div>
